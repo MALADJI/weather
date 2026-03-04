@@ -1,59 +1,121 @@
-# Weather
+# 🌤️ Weather App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+A modern weather application built with **Angular 19** that provides real-time weather information for any city worldwide. The app dynamically updates its background based on current weather conditions and also supports geolocation for automatic weather detection.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
+
+- 🔍 **Search by City** – Enter any city name to get current weather data
+- 📍 **Geolocation Support** – Automatically detect and display weather for your current location
+- 🌡️ **Detailed Weather Info** – Temperature, feels-like, humidity, wind speed & direction
+- 🎨 **Dynamic Backgrounds** – Background changes based on weather condition (sunny, cloudy, rainy, clear)
+- 🕒 **Local Time Display** – Shows the local time of the searched location
+- ⏳ **Loading Spinner** – Visual feedback while fetching data
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Version |
+|------------|---------|
+| Angular | 19.2.x |
+| TypeScript | ~5.7.2 |
+| Bootstrap | ^5.3.6 |
+| RxJS | ~7.8.0 |
+| WeatherAPI | REST API |
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+)
+- [Angular CLI](https://angular.io/cli)
 
 ```bash
-ng serve
+npm install -g @angular/cli
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Installation
 
-## Code scaffolding
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/MALADJI/weather.git
+   cd weather
+   ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate component component-name
+3. **Run the development server**
+   ```bash
+   ng serve
+   ```
+
+4. Open your browser and navigate to `http://localhost:4200`
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── weather/
+│   │   ├── weather.component.ts       # Weather display component
+│   │   ├── weather.component.html     # Weather component template
+│   │   ├── weather.component.css      # Weather component styles
+│   │   ├── weather.service.ts         # WeatherAPI HTTP service
+│   │   └── weather.service.spec.ts    # Service unit tests
+│   ├── app.component.ts               # Root component with core logic
+│   ├── app.component.html             # Root template
+│   ├── app.component.css              # Global component styles
+│   └── app.module.ts                  # App module declarations
+└── index.html                         # App entry point
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🌐 API
 
-## Building
+This app uses the [WeatherAPI](https://www.weatherapi.com/) to fetch real-time weather data.
 
-To build the project run:
+### Endpoints Used
+- **Current Weather by City**: `/current.json?key=API_KEY&q={city}`
+- **Current Weather by Coordinates**: `/current.json?key=API_KEY&q={lat},{lon}`
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📜 Available Scripts
 
-## Running unit tests
+| Command | Description |
+|---------|-------------|
+| `ng serve` | Start development server |
+| `ng build` | Build for production |
+| `ng test` | Run unit tests |
+| `ng build --watch` | Build and watch for changes |
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
+
+## 🧪 Running Tests
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 📄 License
 
-```bash
-ng e2e
-```
+This project is open source and available under the [MIT License](LICENSE).
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 👤 Author
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**MALADJI**  
+GitHub: [@MALADJI](https://github.com/MALADJI)
